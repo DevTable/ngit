@@ -94,7 +94,7 @@ namespace Sharpen
 		{
 			RSACryptoServiceProvider rsa = new RSACryptoServiceProvider (keySize);
 			RSAParameters dsaPars = rsa.ExportParameters (true);
-			return new KeyPair (new RSAPrivateKey (dsaPars), new RSAPublicKey (dsaPars));
+			return new KeyPair (new RSAPrivateCrtKey (dsaPars), new RSAPublicKey (dsaPars));
 		}
 	}
 	
